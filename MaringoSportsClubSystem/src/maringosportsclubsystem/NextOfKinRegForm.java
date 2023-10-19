@@ -37,28 +37,28 @@ public class NextOfKinRegForm extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         buttonGroup6 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        LblMaringoSports = new javax.swing.JLabel();
+        LblNextOfKin = new javax.swing.JLabel();
+        LblNameNOK = new javax.swing.JLabel();
+        LblPhoneNOK = new javax.swing.JLabel();
+        LblEmailNOK = new javax.swing.JLabel();
+        LblRelationNOK = new javax.swing.JLabel();
+        TxtNameNOK = new javax.swing.JTextField();
+        TxtRelationNOK = new javax.swing.JTextField();
+        TxtEmailNOK = new javax.swing.JTextField();
+        TxtPhoneNOK = new javax.swing.JTextField();
+        LblSpecialNeed = new javax.swing.JLabel();
+        LblSpecialNeedDescription = new javax.swing.JLabel();
+        Lbl3Games = new javax.swing.JLabel();
+        CbBox1Game = new javax.swing.JComboBox<>();
+        CbBox2Game = new javax.swing.JComboBox<>();
+        CbBox3Game = new javax.swing.JComboBox<>();
+        BtnCancelSubmission = new javax.swing.JButton();
+        BtnSubmitRegistration = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        TAreaSpecialNeed = new javax.swing.JTextArea();
+        RButtonSpecialNeedNo = new javax.swing.JRadioButton();
+        RButtonSpecialNeedYes = new javax.swing.JRadioButton();
 
         jRadioButton2.setText("Yes");
 
@@ -68,44 +68,49 @@ public class NextOfKinRegForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("MARINGO SPORTS CLUB");
+        LblMaringoSports.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        LblMaringoSports.setText("MARINGO SPORTS CLUB");
 
-        jLabel2.setText("Next of kin:");
+        LblNextOfKin.setText("Next of kin:");
 
-        jLabel3.setText("Name");
+        LblNameNOK.setText("Name");
 
-        jLabel4.setText("Phone No.");
+        LblPhoneNOK.setText("Phone No.");
 
-        jLabel5.setText("email Address");
+        LblEmailNOK.setText("email Address");
 
-        jLabel6.setText("Relationship");
+        LblRelationNOK.setText("Relationship");
 
-        jLabel7.setText("Special need?");
+        LblSpecialNeed.setText("Special need?");
 
-        jLabel8.setText("If Yes, give a description of the need...");
+        LblSpecialNeedDescription.setText("If Yes, give a description of the need...");
 
-        jLabel9.setText("Enter ONLY 3 games of interest.");
+        Lbl3Games.setText("Enter ONLY 3 games of interest.");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FootBall", "Rugby", "Chess" }));
+        CbBox1Game.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FootBall", "Rugby", "Chess" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Basketball", "Netball", "Handball", "Volleyball" }));
+        CbBox2Game.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Basketball", "Netball", "Handball", "Volleyball" }));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Table tenis", "Lawn tennis", "Badminton", "Darts" }));
+        CbBox3Game.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Table tenis", "Lawn tennis", "Badminton", "Darts" }));
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Cancel");
+        BtnCancelSubmission.setBackground(new java.awt.Color(255, 0, 0));
+        BtnCancelSubmission.setText("Cancel");
+        BtnCancelSubmission.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCancelSubmissionActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(153, 255, 204));
-        jButton2.setText("Submit");
+        BtnSubmitRegistration.setBackground(new java.awt.Color(153, 255, 204));
+        BtnSubmitRegistration.setText("Submit");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        TAreaSpecialNeed.setColumns(20);
+        TAreaSpecialNeed.setRows(5);
+        jScrollPane1.setViewportView(TAreaSpecialNeed);
 
-        jRadioButton3.setText("Yes");
+        RButtonSpecialNeedNo.setText("No");
 
-        jRadioButton4.setText("Yes");
+        RButtonSpecialNeedYes.setText("Yes");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,104 +122,104 @@ public class NextOfKinRegForm extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7))
+                            .addComponent(LblSpecialNeedDescription)
+                            .addComponent(LblSpecialNeed))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3)))
+                        .addComponent(RButtonSpecialNeedNo)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(LblMaringoSports)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(LblNameNOK)
+                                    .addComponent(LblNextOfKin))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TxtNameNOK, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel4))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField5)
-                                            .addComponent(jTextField3)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
+                                        .addComponent(LblRelationNOK)
                                         .addGap(27, 27, 27)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton4)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                            .addComponent(jTextField2)))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))
-                                .addGap(58, 58, 58)
-                                .addComponent(jTextField1)))
-                        .addGap(83, 83, 83)
+                                                .addComponent(RButtonSpecialNeedYes)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE))
+                                            .addComponent(TxtRelationNOK)))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(LblEmailNOK)
+                                            .addComponent(LblPhoneNOK))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(TxtPhoneNOK)
+                                            .addComponent(TxtEmailNOK))))))
+                        .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
+                            .addComponent(Lbl3Games)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.Alignment.LEADING, 0, 149, Short.MAX_VALUE)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(CbBox3Game, javax.swing.GroupLayout.Alignment.LEADING, 0, 149, Short.MAX_VALUE)
+                                .addComponent(CbBox2Game, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CbBox1Game, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(68, 68, 68))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(341, 341, 341)
-                .addComponent(jButton1)
+                .addComponent(BtnCancelSubmission)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(BtnSubmitRegistration)
                 .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(LblMaringoSports)
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel9))
+                    .addComponent(LblNextOfKin)
+                    .addComponent(Lbl3Games))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(LblNameNOK)
+                            .addComponent(TxtNameNOK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CbBox1Game, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(LblPhoneNOK)
+                    .addComponent(TxtPhoneNOK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LblEmailNOK)
+                    .addComponent(TxtEmailNOK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CbBox2Game, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(LblRelationNOK)
+                            .addComponent(TxtRelationNOK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(CbBox3Game, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton3))
+                    .addComponent(LblSpecialNeed)
+                    .addComponent(RButtonSpecialNeedYes)
+                    .addComponent(RButtonSpecialNeedNo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
+                .addComponent(LblSpecialNeedDescription)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1)
-                        .addComponent(jButton2))
+                        .addComponent(BtnCancelSubmission)
+                        .addComponent(BtnSubmitRegistration))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15))
         );
@@ -238,6 +243,14 @@ public class NextOfKinRegForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnCancelSubmissionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelSubmissionActionPerformed
+        // TODO add your handling code here:
+        Loginform log = new Loginform();
+        log.show();
+        
+        dispose();
+    }//GEN-LAST:event_BtnCancelSubmissionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -275,38 +288,38 @@ public class NextOfKinRegForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnCancelSubmission;
+    private javax.swing.JButton BtnSubmitRegistration;
+    private javax.swing.JComboBox<String> CbBox1Game;
+    private javax.swing.JComboBox<String> CbBox2Game;
+    private javax.swing.JComboBox<String> CbBox3Game;
+    private javax.swing.JLabel Lbl3Games;
+    private javax.swing.JLabel LblEmailNOK;
+    private javax.swing.JLabel LblMaringoSports;
+    private javax.swing.JLabel LblNameNOK;
+    private javax.swing.JLabel LblNextOfKin;
+    private javax.swing.JLabel LblPhoneNOK;
+    private javax.swing.JLabel LblRelationNOK;
+    private javax.swing.JLabel LblSpecialNeed;
+    private javax.swing.JLabel LblSpecialNeedDescription;
+    private javax.swing.JRadioButton RButtonSpecialNeedNo;
+    private javax.swing.JRadioButton RButtonSpecialNeedYes;
+    private javax.swing.JTextArea TAreaSpecialNeed;
+    private javax.swing.JTextField TxtEmailNOK;
+    private javax.swing.JTextField TxtNameNOK;
+    private javax.swing.JTextField TxtPhoneNOK;
+    private javax.swing.JTextField TxtRelationNOK;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.ButtonGroup buttonGroup6;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

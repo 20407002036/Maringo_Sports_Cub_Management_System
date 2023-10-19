@@ -73,21 +73,14 @@ public class IndividualDashboard extends javax.swing.JFrame {
 
         jLabel2.setText("User Name:");
 
-        jLabel3.setText("Solo");
-
         jLabel4.setText("Name:");
 
         jLabel6.setText("Games:");
 
-        jLabel12.setText("Muthaiga");
+        jLabel12.setText("Maringo");
 
-        jLabel11.setText("School");
+        jLabel11.setText("Sports Club");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane3.setViewportView(jList1);
 
         jButton1.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
