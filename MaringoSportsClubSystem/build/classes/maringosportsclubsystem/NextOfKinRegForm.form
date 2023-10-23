@@ -99,37 +99,50 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="LblNameNOK" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LblNextOfKin" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="LblNextOfKin" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="LblNameNOK" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="TxtNameNOK" min="-2" pref="145" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="LblRelationNOK" min="-2" max="-2" attributes="0"/>
+                                          <Component id="RButtonSpecialNeedYes" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="102" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Component id="TxtRelationNOK" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="RButtonSpecialNeedYes" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="102" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Component id="TxtRelationNOK" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="LblPhoneNOK" min="-2" max="-2" attributes="0"/>
+                                              <Component id="LblNameNOK1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="LblEmailNOK" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="LblPhoneNOK" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="TxtPhoneNOK" max="32767" attributes="0"/>
-                                              <Component id="TxtEmailNOK" max="32767" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="LblRelationNOK" min="-2" max="-2" attributes="0"/>
+                                          <Component id="LblEmailNOK" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="TxtPhoneNOK" max="32767" attributes="0"/>
+                                      <Component id="TxtEmailNOK" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="TxtNameNOK1" min="-2" pref="145" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -168,9 +181,19 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LblNameNOK" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="TxtNameNOK" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="TxtNameNOK" min="-2" max="-2" attributes="0"/>
+                              <Component id="LblNameNOK" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="LblNameNOK1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="TxtNameNOK1" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -183,11 +206,18 @@
                       <Component id="LblPhoneNOK" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtPhoneNOK" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="LblEmailNOK" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TxtEmailNOK" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="CbBox2Game" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TxtEmailNOK" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CbBox2Game" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="LblEmailNOK" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -239,7 +269,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="LblNameNOK">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Name"/>
+            <Property name="text" type="java.lang.String" value="First Name"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="LblPhoneNOK">
@@ -367,6 +397,13 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Yes"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="LblNameNOK1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Last Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="TxtNameNOK1">
         </Component>
       </SubComponents>
     </Container>
