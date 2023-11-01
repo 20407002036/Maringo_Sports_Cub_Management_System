@@ -1,0 +1,30 @@
+F_name
+L_name
+Gender
+Date_Day
+Date_Month
+Date_Year
+P_number
+Email_Add
+Sub_County
+School
+Weight
+Height
+
+Next of Kin
+Kin_F_name
+Kin_L_name
+Kin_P_Number
+Kin_Email_Address
+Kin_Relationship
+
+Special Needs
+SpecialNeed
+Description
+
+Games
+Game1
+Game2
+Game3
+
+
