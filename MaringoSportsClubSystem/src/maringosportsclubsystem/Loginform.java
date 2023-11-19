@@ -1,21 +1,16 @@
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package maringosportsclubsystem;
-//import com.mysql.cj.jdbc.Driver;
-import com.sun.jdi.connect.spi.Connection;
-import java.io.IOException;
-import java.util.Arrays;
-import javax.swing.JOptionPane;
-import java.sql.DriverManager;
+
+import maringosportsclubsystem.DatabaseConnector;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import javax.swing.*;
+import java.lang.*;
 
 /**
  *
@@ -24,7 +19,7 @@ import java.util.logging.Logger;
 public class Loginform extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login form
+     * Creates new form Loginform
      */
     public Loginform() {
         initComponents();
@@ -41,6 +36,9 @@ public class Loginform extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jFrame1 = new javax.swing.JFrame();
+        jTextField3 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         TxtUsername = new javax.swing.JTextField();
@@ -49,10 +47,14 @@ public class Loginform extends javax.swing.JFrame {
         LblPassword = new javax.swing.JLabel();
         BtnRegister = new javax.swing.JButton();
         BtnLogin = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        LblMaringoSportsClub = new javax.swing.JLabel();
+        LblUserNameIcon = new javax.swing.JLabel();
+        LblPasswordIcon = new javax.swing.JLabel();
+        LblUserLogin = new javax.swing.JLabel();
+        LblDontHaveAnAccount = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        LblMaringoSportsClub = new javax.swing.JLabel();
+        LblGreenScreenIcon = new javax.swing.JLabel();
 
         jTextField1.setText("MARINGO SPORTS CLUB");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -63,31 +65,63 @@ public class Loginform extends javax.swing.JFrame {
 
         jTextField2.setText("jTextField2");
 
+        jButton1.setText("jButton1");
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jTextField3.setText("jTextField3");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Maringo Login\n");
+        setLocation(new java.awt.Point(0, 0));
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(42, 81, 53));
+
+        TxtUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         TxtUsername.setName("UserName"); // NOI18N
+        TxtUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtUsernameActionPerformed(evt);
+            }
+        });
 
         LblUserName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LblUserName.setText("UserName");
 
         TxtPassword.setName("Password"); // NOI18N
+        TxtPassword.setPreferredSize(new java.awt.Dimension(5, 25));
 
         LblPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LblPassword.setText("Password");
 
-        BtnRegister.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        BtnRegister.setBackground(new java.awt.Color(24, 49, 33));
         BtnRegister.setText("SIGN UP");
+        BtnRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnRegisterMouseClicked(evt);
+            }
+        });
         BtnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnRegisterActionPerformed(evt);
             }
         });
 
-        BtnLogin.setBackground(java.awt.Color.gray);
+        BtnLogin.setBackground(new java.awt.Color(204, 204, 204));
         BtnLogin.setText("SIGN IN");
         BtnLogin.setName("BtnLogin"); // NOI18N
         BtnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -96,85 +130,103 @@ public class Loginform extends javax.swing.JFrame {
             }
         });
 
+        LblUserNameIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maringosportsclubsystem/IconsAndImages/icons8-username-30.png"))); // NOI18N
+
+        LblPasswordIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maringosportsclubsystem/IconsAndImages/icons8-password-30.png"))); // NOI18N
+
+        LblUserLogin.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        LblUserLogin.setText("User Login");
+
+        LblDontHaveAnAccount.setText("Don't have an account?");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addComponent(BtnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(LblDontHaveAnAccount)
+                .addGap(32, 32, 32)
+                .addComponent(BtnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(83, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LblUserNameIcon)
+                    .addComponent(LblPasswordIcon))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblUserName)
                     .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblPassword)
-                    .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(95, 95, 95))
+                    .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LblUserLogin))
+                .addGap(89, 89, 89))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(LblUserName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(LblPassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(16, 16, 16)
+                .addComponent(LblUserLogin)
+                .addGap(37, 37, 37)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(LblUserName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(LblUserNameIcon)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(LblPassword)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LblPasswordIcon))
+                .addGap(34, 34, 34)
+                .addComponent(BtnLogin)
+                .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
+                    .addComponent(BtnRegister)
+                    .addComponent(LblDontHaveAnAccount))
+                .addGap(22, 22, 22))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 390, 310));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 390, 340));
 
-        LblMaringoSportsClub.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        LblMaringoSportsClub.setText("MARINGO SPORTS CLUB");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LblMaringoSportsClub)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(LblMaringoSportsClub, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 250, 40));
-
+        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("maringosportsclub.com");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 440, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, -1, 20));
 
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1740, -710, -1, -1));
+
+        LblMaringoSportsClub.setBackground(new java.awt.Color(255, 255, 255));
+        LblMaringoSportsClub.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        LblMaringoSportsClub.setForeground(new java.awt.Color(153, 153, 153));
+        LblMaringoSportsClub.setText("MARINGO SPORTS CLUB");
+        jPanel1.add(LblMaringoSportsClub, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, 40));
+
+        LblGreenScreenIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maringosportsclubsystem/IconsAndImages/wallhaven-gj1g6l_800x500.png"))); // NOI18N
+        LblGreenScreenIcon.setText("jLabel4");
+        LblGreenScreenIcon.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(LblGreenScreenIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 800, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 802, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(800, 500));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -190,47 +242,70 @@ public class Loginform extends javax.swing.JFrame {
 
     private void BtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLoginActionPerformed
         // TODO add your handling code here:
-  String username = TxtUsername.getText(); // Get the username entered by the user
-    char[] passwordChars = TxtPassword.getPassword(); // Get the password as a character array
 
-    // Convert the password character array to a String
-    String password = new String(passwordChars);
+       Connection con = DatabaseConnector.getConnection();
 
-    // Clear the password character array
-    Arrays.fill(passwordChars, ' ');
+// Define the SQL query for authentication
+String sql = "SELECT * FROM Users WHERE UserName = ? AND Password = ?";
 
-    // Connect to the database and perform the login check
-    try {
-        Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/MaringoSports", "root", "10229101151");
-       // String sql = "SELECT * FROM login WHERE Username = ? AND Password = ?";
-        PreparedStatement stmt; //= ((Object) con).PreparedStatement(sql);
-       stmt = con.PreparedStatement("SELECT * FROM login WHERE Username = ? AND Password = ?");
-       stmt.setString(1, username);
-       stmt.setString(2, password);
+ String enteredUsername = TxtUsername.getText();
+ String enteredPassword = TxtPassword.getText();
 
-       ResultSet rs = (ResultSet) stmt.executeQuery();
+try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+    // Set the username and password parameters
+   
+    preparedStatement.setString(1, enteredUsername);
+    preparedStatement.setString(2, enteredPassword);
 
-        if (rs.next()) {
-            // Successful login
-            IndividualDashboard dash = new IndividualDashboard();
-            dash.setVisible(true);
+    // Execute the query
+    ResultSet resultSet = preparedStatement.executeQuery();
+
+    // Delete the entered values from the text boxes
+    TxtUsername.setText("");
+    TxtPassword.setText("");
+
+    // Check if the result set has any rows (authentication successful)
+    if (resultSet.next()) {
+        String userType = resultSet.getString("userType");
+
+        if ("Member".equals(userType)) {
+            System.out.println("Normal User login successful");
+            // Redirect to IndividualDashboard
+            DatabaseConnector.closeConnection();
+            IndividualDashboard individualDashboard = new IndividualDashboard();
+            individualDashboard.show();
             dispose();
-        } else {
-            // Invalid login
-            JOptionPane.showMessageDialog(this, "Invalid username or password");
+        } else if ("Manager".equals(userType)) {
+            System.out.println("Manager login successful");
+            // Redirect to ManagerDashboard
+            DatabaseConnector.closeConnection();
+            ManagerDashBoard managerDashboard = new ManagerDashBoard();
+            managerDashboard.show();
+            dispose();
         }
+    } else {
+        System.out.println("Login failed");
+        JOptionPane.showMessageDialog(null, "Login Failed, Username or Password is Incorrect!");
+    }
+} catch (SQLException e) {
+    e.printStackTrace();
+    JOptionPane.showMessageDialog(null, "Failed to Connect to DB");
+} finally {
+    // Close the database connection
+    if (con != null) {
+        DatabaseConnector.closeConnection();
+    }
+}
 
-        con.close();
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Database connection error: " + e.getMessage());
-    }   catch (IOException ex) {
-            Logger.getLogger(Loginform.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }//GEN-LAST:event_BtnLoginActionPerformed
 
-    private PreparedStatement con(String sql) {
-        return null;
-    }
+    private void BtnRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRegisterMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnRegisterMouseClicked
+
+    private void TxtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtUsernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,27 +345,29 @@ public class Loginform extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnLogin;
     private javax.swing.JButton BtnRegister;
+    private javax.swing.JLabel LblDontHaveAnAccount;
+    private javax.swing.JLabel LblGreenScreenIcon;
     private javax.swing.JLabel LblMaringoSportsClub;
     private javax.swing.JLabel LblPassword;
+    private javax.swing.JLabel LblPasswordIcon;
+    private javax.swing.JLabel LblUserLogin;
     private javax.swing.JLabel LblUserName;
+    private javax.swing.JLabel LblUserNameIcon;
     private javax.swing.JPasswordField TxtPassword;
     private javax.swing.JTextField TxtUsername;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 
-    private static class ResultSet {
-
-        public ResultSet() {
-        }
-
-        private boolean next() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
+    void upDateDB() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
 }
