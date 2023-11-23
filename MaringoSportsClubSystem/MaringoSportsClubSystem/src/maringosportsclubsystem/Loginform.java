@@ -82,12 +82,22 @@ public class Loginform extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Maringo Login\n");
+        setLocation(new java.awt.Point(0, 0));
+        setUndecorated(true);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(42, 81, 53));
+
+        TxtUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         TxtUsername.setName("UserName"); // NOI18N
+        TxtUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtUsernameActionPerformed(evt);
+            }
+        });
 
         LblUserName.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LblUserName.setText("UserName");
@@ -98,7 +108,7 @@ public class Loginform extends javax.swing.JFrame {
         LblPassword.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         LblPassword.setText("Password");
 
-        BtnRegister.setBackground(new java.awt.Color(61, 98, 49));
+        BtnRegister.setBackground(new java.awt.Color(24, 49, 33));
         BtnRegister.setText("SIGN UP");
         BtnRegister.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -111,7 +121,7 @@ public class Loginform extends javax.swing.JFrame {
             }
         });
 
-        BtnLogin.setBackground(java.awt.Color.gray);
+        BtnLogin.setBackground(new java.awt.Color(204, 204, 204));
         BtnLogin.setText("SIGN IN");
         BtnLogin.setName("BtnLogin"); // NOI18N
         BtnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -133,28 +143,26 @@ public class Loginform extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LblUserNameIcon)
-                    .addComponent(LblPasswordIcon))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LblUserName)
-                    .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LblPassword)
-                    .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LblUserLogin)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(89, 89, 89))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(LblDontHaveAnAccount)
                 .addGap(32, 32, 32)
                 .addComponent(BtnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(83, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LblUserNameIcon)
+                    .addComponent(LblPasswordIcon))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LblUserName)
+                    .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LblPassword)
+                    .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LblUserLogin))
+                .addGap(89, 89, 89))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +173,7 @@ public class Loginform extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(LblUserName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(LblUserNameIcon)
@@ -177,20 +185,20 @@ public class Loginform extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TxtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(LblPasswordIcon))
-                .addGap(18, 18, 18)
+                .addGap(34, 34, 34)
                 .addComponent(BtnLogin)
-                .addGap(48, 48, 48)
+                .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnRegister)
                     .addComponent(LblDontHaveAnAccount))
                 .addGap(22, 22, 22))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 390, 340));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 390, 340));
 
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("maringosportsclub.com");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, -1, 20));
 
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1740, -710, -1, -1));
@@ -203,22 +211,22 @@ public class Loginform extends javax.swing.JFrame {
 
         LblGreenScreenIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maringosportsclubsystem/IconsAndImages/wallhaven-gj1g6l_800x500.png"))); // NOI18N
         LblGreenScreenIcon.setText("jLabel4");
-        jPanel1.add(LblGreenScreenIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 500));
+        LblGreenScreenIcon.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(LblGreenScreenIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 800, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(800, 500));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -235,60 +243,69 @@ public class Loginform extends javax.swing.JFrame {
     private void BtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLoginActionPerformed
         // TODO add your handling code here:
 
-        Connection con = DatabaseConnector.getConnection();
+       Connection con = DatabaseConnector.getConnection();
 
-        // Define the SQL query for authentication
-        String sql = "SELECT * FROM login WHERE username = ? AND password = ?";
-        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
-            // Set the username and password parameters
-            String Enteredusername = TxtUsername.getText();
-            String Enteredpassword = TxtPassword.getText();
-           // char[] passwordChars = TxtPassword.getPassword();
-           // String EnteredPassword = new String(passwordChars);
-            
-            
-            preparedStatement.setString(1, Enteredusername);
-            preparedStatement.setString(2, Enteredpassword);
+// Define the SQL query for authentication
+String sql = "SELECT * FROM Users WHERE UserName = ? AND Password = ?";
 
-            // Execute the query
-            ResultSet resultSet = preparedStatement.executeQuery();
-            
-            //Delete the enterd values from the Txtboxes
-            TxtUsername.setText("");
-            TxtPassword.setText("");
+ String enteredUsername = TxtUsername.getText();
+ String enteredPassword = TxtPassword.getText();
 
-            // Check if the result set has any rows (authentication successful)
-            if (resultSet.next()) {
-                System.out.println("Login successful");
-                //JOptionPane.showMessageDialog(null,"Login Successfull");
-                
-                DatabaseConnector.closeConnection();
-                 IndividualDashboard dash = new IndividualDashboard();
-                 dash.show();
-                 dispose();
-        
-            } else {
-                System.out.println("Login failed");
-                JOptionPane. showMessageDialog(null, "Login Failed, Username or Password is Incorrect!");
-                
-                
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null,"Failed to Connect to DB");
-        } finally {
-            // Close the database connection
-            if (con != null){
-            DatabaseConnector.closeConnection();
-            }
-        }
- 
+try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+    // Set the username and password parameters
    
+    preparedStatement.setString(1, enteredUsername);
+    preparedStatement.setString(2, enteredPassword);
+
+    // Execute the query
+    ResultSet resultSet = preparedStatement.executeQuery();
+
+    // Delete the entered values from the text boxes
+    TxtUsername.setText("");
+    TxtPassword.setText("");
+
+    // Check if the result set has any rows (authentication successful)
+    if (resultSet.next()) {
+        String userType = resultSet.getString("userType");
+
+        if ("Member".equals(userType)) {
+            System.out.println("Normal User login successful");
+            // Redirect to IndividualDashboard
+            DatabaseConnector.closeConnection();
+            IndividualDashboard individualDashboard = new IndividualDashboard();
+            individualDashboard.show();
+            dispose();
+        } else if ("Manager".equals(userType)) {
+            System.out.println("Manager login successful");
+            // Redirect to ManagerDashboard
+            DatabaseConnector.closeConnection();
+            ManagerDashBoard managerDashboard = new ManagerDashBoard();
+            managerDashboard.show();
+            dispose();
+        }
+    } else {
+        System.out.println("Login failed");
+        JOptionPane.showMessageDialog(null, "Login Failed, Username or Password is Incorrect!");
+    }
+} catch (SQLException e) {
+    e.printStackTrace();
+    JOptionPane.showMessageDialog(null, "Failed to Connect to DB");
+} finally {
+    // Close the database connection
+    if (con != null) {
+        DatabaseConnector.closeConnection();
+    }
+}
+
     }//GEN-LAST:event_BtnLoginActionPerformed
 
     private void BtnRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRegisterMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnRegisterMouseClicked
+
+    private void TxtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtUsernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -348,4 +365,9 @@ public class Loginform extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
+
+    void upDateDB() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }

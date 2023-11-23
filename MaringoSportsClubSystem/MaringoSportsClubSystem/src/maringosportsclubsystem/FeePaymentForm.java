@@ -66,6 +66,11 @@ public class FeePaymentForm extends javax.swing.JFrame {
 
         BtnSubmitRegistration.setBackground(new java.awt.Color(153, 255, 204));
         BtnSubmitRegistration.setText("Submit");
+        BtnSubmitRegistration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSubmitRegistrationActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel2.setText("MARINGO SPORTS CLUB");
@@ -177,6 +182,14 @@ public class FeePaymentForm extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void BtnSubmitRegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSubmitRegistrationActionPerformed
+        // TODO add your handling code here:
+        Loginform log = new Loginform();
+        log.show();
+        
+        dispose();
+    }//GEN-LAST:event_BtnSubmitRegistrationActionPerformed
 
     /**
      * @param args the command line arguments

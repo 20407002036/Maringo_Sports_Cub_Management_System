@@ -251,7 +251,8 @@ public class UserNameAndPass extends javax.swing.JFrame {
           Connection con = DatabaseConnector.getConnection();
          
          // Define the SQL query for authentication
-        String sql = "insert into login(username, password) values (?,?)";
+        String sql = "insert into Users(UserName, Password) values (?,?)";
+//        update Users set userName = ? Password = ? where 
         try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
             // Set the username and password parameters
             String Enteredusername = TxtUserName.getText();
@@ -269,6 +270,7 @@ public class UserNameAndPass extends javax.swing.JFrame {
             //Delete the enterd values from the Txtboxes
             TxtUserName.setText("");
             TxtPassword.setText("");
+            TxtPassConfirm.setText("");
 
             // Check if the result set has any rows (authentication successful)
 

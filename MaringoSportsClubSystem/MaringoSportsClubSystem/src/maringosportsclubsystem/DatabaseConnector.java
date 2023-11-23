@@ -12,16 +12,16 @@ public class DatabaseConnector {
     private static Connection connection;
 
     public static Connection getConnection() {
-        if (connection == null) {
+//        if (connection == null) {
             try {
                 connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
             } catch (SQLException e) {
                 e.printStackTrace();
                 throw new RuntimeException("Failed to connect to the database");
             }
-        }
+//        }
         return connection;
-    }
+   }
 
     public static void closeConnection() {
         if (connection != null) {
