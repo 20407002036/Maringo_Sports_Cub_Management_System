@@ -14,7 +14,7 @@ import java.lang.*;
 
 /**
  *
- * @author COMP LAB 1
+ * @author Solomon Kaniaru
  */
 public class Loginform extends javax.swing.JFrame {
 

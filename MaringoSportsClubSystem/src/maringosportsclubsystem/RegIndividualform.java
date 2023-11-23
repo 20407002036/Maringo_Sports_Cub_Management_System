@@ -21,8 +21,7 @@ import java.util.Date;
 
 /**
  *
- * @author COMP LAB 1
- * @param <DOBChooser>
+ * @author Solomon Kaniaru
  */
 public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
     
@@ -119,7 +118,7 @@ public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBackground(new java.awt.Color(21, 25, 28));
         jPanel1.setForeground(new java.awt.Color(204, 204, 204));
 
         BtnNext.setBackground(new java.awt.Color(0, 204, 0));
@@ -145,7 +144,7 @@ public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(76, 41, 211));
+        jPanel2.setBackground(new java.awt.Color(30, 40, 44));
 
         TxtFirstName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +319,7 @@ public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        jPanel3.setBackground(new java.awt.Color(76, 41, 211));
+        jPanel3.setBackground(new java.awt.Color(30, 40, 44));
 
         LblNextOfKin.setForeground(new java.awt.Color(204, 204, 204));
         LblNextOfKin.setText("Next of kin:");
@@ -406,7 +405,7 @@ public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new java.awt.Color(76, 41, 211));
+        jPanel4.setBackground(new java.awt.Color(30, 40, 44));
 
         CbBox1Game.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FootBall", "Rugby", "Chess" }));
 
@@ -500,6 +499,7 @@ public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel6.setBackground(new java.awt.Color(21, 25, 28));
         jPanel6.setOpaque(false);
 
         LblMaringoSports.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
@@ -534,7 +534,7 @@ public class RegIndividualform<DOBChooser> extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(76, 41, 211));
+        jPanel7.setBackground(new java.awt.Color(30, 40, 44));
 
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setText("UserLogin Credentials");
