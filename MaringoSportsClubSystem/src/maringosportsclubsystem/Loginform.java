@@ -109,6 +109,7 @@ public class Loginform extends javax.swing.JFrame {
         LblPassword.setText("Password");
 
         BtnRegister.setBackground(new java.awt.Color(24, 49, 33));
+        BtnRegister.setForeground(new java.awt.Color(153, 153, 153));
         BtnRegister.setText("SIGN UP");
         BtnRegister.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -137,6 +138,7 @@ public class Loginform extends javax.swing.JFrame {
         LblUserLogin.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         LblUserLogin.setText("User Login");
 
+        LblDontHaveAnAccount.setForeground(new java.awt.Color(102, 102, 102));
         LblDontHaveAnAccount.setText("Don't have an account?");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
