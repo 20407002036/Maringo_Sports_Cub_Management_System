@@ -1,5 +1,5 @@
 # Maringo_Sports_Cub_Management_System
-## Object Oriented Programming in Java + MySql
+## Object Oriented Programming in Java + SQL
 This is the Maringo Sports club management system. It's the capstone project for the class in Object Oriented Programming II.
 
 # Craetion of the Project:
